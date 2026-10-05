@@ -50,6 +50,7 @@
           <li><a href="#stats">Player Stats</a></li>
           <li><a href="#overall">Overall Stats</a></li>
           <li><a href="#gamble">Gamble</a></li>
+          <li><a href="#weekly">Weekly Quests</a></li>
           <li><a href="#zweck">Zweck der Verarbeitung</a></li>
           <li><a href="#discord">Discord</a></li>
           <li><a href="#hosting">Hosting dieser Seite</a></li>
@@ -212,6 +213,31 @@
         </p>
       </article>
 
+      <article class="section" id="weekly">
+        <h2>7b. Weekly Community Quests</h2>
+        <p>
+          Crafty betreibt wöchentliche <strong>Community Quests</strong>: Alle Spieler arbeiten
+          gemeinsam an denselben Server-Zielen. Abgeschlossene Quests können qualifizierten Spielern
+          einen zusätzlichen Bonus-Gamble-Roll geben.
+        </p>
+        <p>Dazu verarbeitet Crafty personenbezogen (an die Minecraft-UUID gebunden):</p>
+        <ul>
+          <li>Wochenzugehörigkeit (Participation)</li>
+          <li>qualifizierte Weekly-Onlinezeit (nur verified + spielbereit)</li>
+          <li>Reward-Berechtigung und erhaltene / verwendete Bonus-Gamble-Rolls</li>
+        </ul>
+        <p class="muted">
+          Individuelle Beitrags-Historien (z.&nbsp;B. „Spieler X hat N Blöcke abgebaut“) werden
+          bewusst <strong>nicht</strong> gespeichert — nur der gemeinsame Quest-Fortschritt.
+        </p>
+        <p>
+          <code>/unlink</code> löscht Weekly-Participation und Bonus-Grants <strong>nicht</strong>
+          (gleiche UUID behält Credits nach Relink).
+          <code>/delete-data</code> löscht diese personenbezogenen Weekly-Daten.
+          Aggregierter Community-Quest-Fortschritt bleibt erhalten.
+        </p>
+      </article>
+
       <article class="section" id="zweck">
         <h2>8. Zweck der Verarbeitung</h2>
         <p>Die Verarbeitung erfolgt im Rahmen des Betriebs des privaten Minecraft-/Discord-Servers und der von den Nutzern aktiv verwendeten Crafty-Funktionen.</p>
@@ -224,6 +250,7 @@
           <li>Rollenverwaltung</li>
           <li>Stats und Compare</li>
           <li>Gamble und Reward Delivery</li>
+          <li>Weekly Community Quests, dynamische Questskalierung und Bonus-Reward-Berechtigung</li>
           <li>Abuse Prevention</li>
           <li>technische Stabilität</li>
         </ul>
@@ -355,6 +382,7 @@
           <li>Privacy Settings</li>
           <li>von Crafty getrackte Role IDs</li>
           <li>Gamble-Historie</li>
+          <li>Weekly-Participation, Weekly-Playtime, Bonus-Gamble-Grants</li>
         </ul>
         <p class="muted">
           Secrets und OAuth Tokens sind nicht enthalten.
@@ -426,7 +454,7 @@
           Diese Datenschutzhinweise können angepasst werden, wenn Crafty neue Funktionen erhält.
         </p>
         <p>
-          <strong>Stand:</strong> 5. Oktober 2026
+          <strong>Stand:</strong> 5. Oktober 2026 (Weekly Community Quests ergänzt)
         </p>
       </article>
     </div>
