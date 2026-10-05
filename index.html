@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Crafty – Datenschutz</title>
+  <meta name="description" content="Datenschutzhinweise für Crafty, den Minecraft- und Discord-Companion unseres privaten Craft Attack Servers.">
+  <meta name="color-scheme" content="dark">
+  <link rel="stylesheet" href="./style.css">
+  <!--
+    TODO Betreiber:
+    Vor einer öffentlichen Erweiterung des Projekts prüfen,
+    ob weitere Angaben zum Verantwortlichen / Anbieter erforderlich sind.
+  -->
+</head>
+<body>
+  <a class="skip-link" href="#inhalt">Zum Inhalt springen</a>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="#top" id="top">
+        <span class="brand-name">Crafty</span>
+        <span class="brand-tag">Datenschutz</span>
+      </a>
+      <span class="nav-pill" aria-hidden="true">Privacy</span>
+    </div>
+  </header>
+
+  <main id="inhalt">
+    <div class="main-inner">
+      <section class="hero" aria-labelledby="page-title">
+        <h1 id="page-title">Crafty <span>Datenschutz</span></h1>
+        <p class="lead">
+          Datenschutzhinweise für den privaten Craft Attack Minecraft- und Discord-Server.
+        </p>
+        <div class="meta-row" aria-label="Kurzinfos">
+          <span class="chip"><strong>Stand</strong> 5. Oktober 2026</span>
+          <span class="chip"><strong>Betreiber</strong> privates Projekt</span>
+          <span class="chip"><strong>Kontakt</strong> [KONTAKT_EMAIL]</span>
+        </div>
+      </section>
+
+      <nav class="toc" aria-labelledby="toc-title">
+        <h2 id="toc-title">Inhalt</h2>
+        <ol>
+          <li><a href="#worum">Worum geht es?</a></li>
+          <li><a href="#daten">Welche Daten verarbeitet Crafty?</a></li>
+          <li><a href="#linking">Account-Verknüpfung</a></li>
+          <li><a href="#beitritt">Discord-Serverbeitritt</a></li>
+          <li><a href="#stats">Player Stats</a></li>
+          <li><a href="#overall">Overall Stats</a></li>
+          <li><a href="#gamble">Gamble</a></li>
+          <li><a href="#zweck">Zweck der Verarbeitung</a></li>
+          <li><a href="#discord">Discord</a></li>
+          <li><a href="#hosting">Hosting dieser Seite</a></li>
+          <li><a href="#speicherung">Speicherung</a></li>
+          <li><a href="#unlink">/unlink</a></li>
+          <li><a href="#loeschen">Daten löschen</a></li>
+          <li><a href="#export">Datenexport</a></li>
+          <li><a href="#privacy-settings">Privacy Settings</a></li>
+          <li><a href="#logs">Technische Logs</a></li>
+          <li><a href="#sicherheit">Sicherheit</a></li>
+          <li><a href="#rechte">Rechte / Kontakt</a></li>
+          <li><a href="#aenderungen">Änderungen</a></li>
+        </ol>
+      </nav>
+
+      <article class="section" id="worum">
+        <h2>1. Worum geht es?</h2>
+        <p>
+          Crafty ist ein Bot- und Minecraft-Companion für einen privaten Minecraft- und Discord-Server.
+          Crafty verbindet Minecraft- und Discord-Accounts und stellt Serverfunktionen bereit.
+        </p>
+        <p class="muted">
+          Diese Hinweise beschreiben die technische Datenverarbeitung so konkret wie möglich.
+          Sie ersetzen keine individuelle Rechtsberatung und behaupten keine vollständige rechtliche Konformität.
+        </p>
+      </article>
+
+      <article class="section" id="daten">
+        <h2>2. Welche Daten verarbeitet Crafty?</h2>
+
+        <h3>Discord</h3>
+        <ul>
+          <li>Discord User ID (dauerhaft gespeichert, wenn Accounts verknüpft sind)</li>
+          <li>Guild-Mitgliedschaft (zur Laufzeit geprüft; nicht als dauerhaftes Profil gespeichert)</li>
+          <li>von Crafty vergebene Role IDs (für Rollentracking)</li>
+          <li>Discord–Minecraft-Verknüpfung</li>
+        </ul>
+        <p class="muted">
+          Discord-Username, Display Name, Avatar und E-Mail speichert Crafty nicht dauerhaft.
+          Solche Angaben können kurzzeitig über die Discord-API sichtbar sein, werden aber nicht als Profil in der Crafty-Datenbank abgelegt.
+        </p>
+
+        <h3>Minecraft</h3>
+        <ul>
+          <li>Minecraft UUID</li>
+          <li>Minecraft Username</li>
+          <li>First Seen / Last Seen</li>
+          <li>Join-/Leave-Zeitpunkte</li>
+          <li>Spielzeit (Playtime)</li>
+          <li>Player Stats (u.&nbsp;a. Survival-, Combat-, Mining-, Travel- und verwandte Zähler, soweit vom System getrackt)</li>
+        </ul>
+
+        <h3>Crafty-Funktionen</h3>
+        <ul>
+          <li><code>/stats</code> und <code>/compare</code></li>
+          <li>Overall Stats (serverweite Aggregationen im Discord)</li>
+          <li><code>/gamble</code> inklusive Roll-Historie und Reward-Zustellung</li>
+          <li>Privacy Settings (Sichtbarkeit persönlicher Stats)</li>
+          <li>kurzlebige OAuth-Sessions und ggf. Link-Codes</li>
+        </ul>
+
+        <h3>Gamble (Details)</h3>
+        <ul>
+          <li>Rolls / Roll-Nummer</li>
+          <li>Ergebnis, Rarity, Reward</li>
+          <li>Delivery Status und Zeitpunkt</li>
+          <li>Bezug zur Minecraft UUID (und Discord User ID für die Zuordnung)</li>
+        </ul>
+
+        <div class="note">
+          Crafty speichert selbst keine IP-Adressen, Chat-Inhalte, OAuth Access Tokens oder Authorization Codes dauerhaft.
+        </div>
+      </article>
+
+      <article class="section" id="linking">
+        <h2>3. Account-Verknüpfung</h2>
+        <p>
+          Crafty verknüpft eine Minecraft UUID mit einem Discord-Account.
+          Die Authentifizierung läuft über Discord OAuth2 (Scopes u.&nbsp;a. <code>identify</code> und <code>guilds.join</code>).
+        </p>
+        <p>
+          Authorization Code und Access Token werden nur kurzzeitig im Speicher verwendet,
+          um die Discord-Identität zu laden und – falls nötig – den Serverbeitritt auszuführen.
+          Danach werden die Tokens verworfen und nicht in der Crafty-Datenbank gespeichert.
+        </p>
+        <p class="muted">
+          Die Discord-Autorisierung (OAuth Consent) ist nicht dasselbe wie eine datenschutzrechtliche Einwilligung.
+        </p>
+      </article>
+
+      <article class="section" id="beitritt">
+        <h2>4. Discord-Serverbeitritt</h2>
+        <p>
+          Für den Spielzugang muss die verknüpfte Discord-Identität Mitglied des konfigurierten Discord-Servers sein.
+          Crafty kann im Rahmen des Link-Vorgangs prüfen, ob du Mitglied bist.
+        </p>
+        <p>
+          Wenn du noch nicht Mitglied bist, kann Crafty die Discord-Autorisierung nutzen,
+          um dich über <code>guilds.join</code> dem Server hinzuzufügen – sofern du das bei Discord freigibst.
+        </p>
+        <p class="muted">
+          Eine gesonderte „Rules Screening“-/Serverregeln-Akzeptanz-Prüfung durch Crafty ist derzeit nicht implementiert.
+          Discord kann eigene Serverregeln und Mitgliedschaftsschritte unabhängig von Crafty anwenden.
+        </p>
+      </article>
+
+      <article class="section" id="stats">
+        <h2>5. Player Stats</h2>
+        <p>
+          Crafty speichert persönliche Minecraft-Spielstatistiken pro Minecraft UUID.
+          Andere Discord-Mitglieder können bestimmte Daten über <code>/stats</code> und <code>/compare</code> sehen,
+          wenn die öffentliche Sichtbarkeit erlaubt ist.
+        </p>
+        <ul>
+          <li><code>/stats</code> – eigene Stats jederzeit</li>
+          <li><code>/stats</code> für andere – nur wenn diese öffentliche Stats erlauben</li>
+          <li><code>/compare</code> – Vergleich, nur wenn die jeweiligen Sichtbarkeitsregeln es zulassen</li>
+        </ul>
+        <p>
+          Die Sichtbarkeit lässt sich über <code>/privacy-settings</code> einschränken (siehe Abschnitt&nbsp;15).
+          Standardmäßig sind öffentliche Stats erlaubt (ON).
+        </p>
+      </article>
+
+      <article class="section" id="overall">
+        <h2>6. Overall Stats</h2>
+        <p>
+          Serverweite aggregierte Statistiken werden im Discord angezeigt.
+          Dazu gehören zum Beispiel Spieleraktivität, Serverstatus, Gesamtspielzeit sowie
+          aggregierte Werte wie Blocks, Kills oder World Stats.
+        </p>
+        <p class="muted">
+          Diese Aggregationen bleiben auch nach der Löschung einzelner Personen bestehen,
+          soweit daraus keine Einzelperson mehr rekonstruierbar ist.
+        </p>
+      </article>
+
+      <article class="section" id="gamble">
+        <h2>7. Gamble</h2>
+        <p>
+          <code>/gamble</code> ist ein kostenloses, serverinternes Minecraft-Loot-System.
+          Es gibt keine Echtgeldkäufe und keine Premium-Rolls.
+        </p>
+        <p>Dafür werden insbesondere gespeichert:</p>
+        <ul>
+          <li>tägliche Roll-Nutzung</li>
+          <li>Gewinn / Item / Menge</li>
+          <li>Rarity</li>
+          <li>Minecraft UUID</li>
+          <li>Zeitpunkt</li>
+          <li>Reward Delivery Status</li>
+        </ul>
+        <p>Diese Daten dienen insbesondere dazu:</p>
+        <ul>
+          <li>das Daily Limit durchzusetzen</li>
+          <li>doppelte Rewards zu verhindern</li>
+          <li>Offline-Rewards später zuzustellen</li>
+        </ul>
+        <p class="muted">
+          Ergebnisse können im Discord-Channel sichtbar sein.
+          Die persönliche Gamble-Historie ist Teil von Auskunft/Löschung über die Privacy-Commands.
+        </p>
+      </article>
+
+      <article class="section" id="zweck">
+        <h2>8. Zweck der Verarbeitung</h2>
+        <p>Die Verarbeitung erfolgt im Rahmen des Betriebs des privaten Minecraft-/Discord-Servers und der von den Nutzern aktiv verwendeten Crafty-Funktionen.</p>
+        <p>Daten werden ausschließlich verwendet für:</p>
+        <ul>
+          <li>Minecraft/Discord Account Linking</li>
+          <li>Serverzugang</li>
+          <li>Rollenverwaltung</li>
+          <li>Stats und Compare</li>
+          <li>Gamble und Reward Delivery</li>
+          <li>Abuse Prevention</li>
+          <li>technische Stabilität</li>
+        </ul>
+        <p>
+          Crafty verkauft keine personenbezogenen Daten.
+          Es gibt keine Werbung und kein Profiling für Werbezwecke durch Crafty.
+        </p>
+      </article>
+
+      <article class="section" id="discord">
+        <h2>9. Discord</h2>
+        <p>
+          Crafty verwendet die Discord API und Discord OAuth.
+          Zusätzlich gelten die Datenschutzbestimmungen von Discord.
+        </p>
+        <p>
+          Discord Privacy Policy:
+          <a href="https://discord.com/privacy" rel="noopener noreferrer">https://discord.com/privacy</a>
+        </p>
+      </article>
+
+      <article class="section" id="hosting">
+        <h2>10. Hosting dieser Datenschutzseite</h2>
+        <p>Diese Datenschutzseite wird über GitHub Pages bereitgestellt.</p>
+        <p>
+          Beim Aufruf verarbeitet GitHub technisch notwendige Verbindungsdaten
+          (z.&nbsp;B. IP-Adresse und Server-Logs) im Rahmen des Hostings.
+        </p>
+        <p>
+          GitHub Privacy Statement:
+          <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" rel="noopener noreferrer">
+            https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement
+          </a>
+        </p>
+        <p class="muted">
+          Diese Website selbst setzt keine Cookies, speichert nichts im LocalStorage,
+          lädt keine Analytics und keine Tracking-Skripte.
+        </p>
+      </article>
+
+      <article class="section" id="speicherung">
+        <h2>11. Speicherung</h2>
+        <p>Crafty nutzt konfigurierbare Aufbewahrungsregeln. Mit den aktuellen Defaults gilt:</p>
+        <div class="table-wrap" role="region" aria-label="Aufbewahrungszeiten" tabindex="0">
+          <table>
+            <thead>
+              <tr>
+                <th scope="col">Daten</th>
+                <th scope="col">Aufbewahrung (Default)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>OAuth Sessions</td>
+                <td>ca. 10 Minuten, danach physische Löschung</td>
+              </tr>
+              <tr>
+                <td>Link Codes</td>
+                <td>ca. 10 Minuten, danach physische Löschung</td>
+              </tr>
+              <tr>
+                <td>Technische Logs</td>
+                <td>Ziel: max. 14 Tage</td>
+              </tr>
+              <tr>
+                <td>Backups (falls vorhanden)</td>
+                <td>max. 14 Tage</td>
+              </tr>
+              <tr>
+                <td>Player Stats / Metadaten</td>
+                <td>bis Löschanfrage bzw. solange für den Serverbetrieb erforderlich</td>
+              </tr>
+              <tr>
+                <td>Linking-Mapping</td>
+                <td>bis <code>/unlink</code> oder <code>/delete-data</code></td>
+              </tr>
+              <tr>
+                <td>Gamble-Historie</td>
+                <td>bis <code>/delete-data</code></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </article>
+
+      <article class="section" id="unlink">
+        <h2>12. /unlink</h2>
+        <p>
+          <code>/unlink</code> trennt nur die Minecraft–Discord-Verknüpfung und entfernt von Crafty vergebene Rollen.
+        </p>
+        <div class="note warning">
+          <code>/unlink</code> ist <strong>nicht</strong> automatisch eine vollständige Datenlöschung.
+          Player Stats können weiterhin bestehen.
+        </div>
+      </article>
+
+      <article class="section" id="loeschen">
+        <h2>13. Daten löschen</h2>
+        <p>
+          Mit <code>/delete-data</code> (Discord, mit Bestätigung) kannst du die personenbezogenen Crafty-Daten
+          entsprechend der implementierten Funktion löschen lassen – inklusive Linking, Stats,
+          Privacy Settings, Gamble-Historie und Rollenzuordnungen.
+        </p>
+        <p>
+          Es ist eine Bestätigung erforderlich.
+          Aggregierte Overall-Counter werden nicht zurückgerechnet.
+        </p>
+        <p class="muted">
+          Das Verlassen des Discord-Servers löscht historische Minecraft-Stats nicht automatisch.
+        </p>
+      </article>
+
+      <article class="section" id="export">
+        <h2>14. Datenexport</h2>
+        <p>
+          Mit <code>/data-export</code> erhältst du eine Übersicht deiner gespeicherten Crafty-Daten
+          (als JSON, nur für dich sichtbar / ephemeral).
+        </p>
+        <p class="muted">
+          Kurzinfo zusätzlich über <code>/privacy</code>.
+        </p>
+      </article>
+
+      <article class="section" id="privacy-settings">
+        <h2>15. Privacy Settings</h2>
+        <p>
+          Mit <code>/privacy-settings</code> kannst du steuern, ob andere deine persönlichen Player Stats sehen dürfen
+          (<code>allow_public_stats</code>).
+        </p>
+        <p>
+          Standard: <strong>ON</strong> (andere dürfen deine Stats sehen).
+          Du kannst das auf OFF stellen.
+        </p>
+      </article>
+
+      <article class="section" id="logs">
+        <h2>16. Technische Logs</h2>
+        <p>
+          Crafty kann technische Logs zur Fehlerdiagnose erzeugen.
+          Secrets wie Bot Token, Client Secret, Bridge Secret, OAuth Tokens oder Encryption Keys
+          sowie vollständige OAuth-URLs mit Code sollen nicht protokolliert werden.
+          Discord-IDs und Minecraft-UUIDs werden bevorzugt maskiert.
+        </p>
+      </article>
+
+      <article class="section" id="sicherheit">
+        <h2>17. Sicherheit</h2>
+        <p>
+          Crafty versucht, Daten technisch angemessen zu schützen
+          (u.&nbsp;a. Zugriffsschutz der Betriebsdaten und optionale Feldverschlüsselung für Discord-User-IDs).
+        </p>
+        <p class="muted">
+          Interne Sicherheitsdetails, Schlüssel und Betriebsgeheimnisse werden hier bewusst nicht veröffentlicht.
+        </p>
+      </article>
+
+      <article class="section" id="rechte">
+        <h2>18. Rechte / Kontakt</h2>
+        <p>
+          Bei Fragen sowie Auskunfts-, Berichtigungs- oder Löschwünschen:
+          <strong>[KONTAKT_EMAIL]</strong>
+        </p>
+        <p>Zusätzlich stehen Self-Service-Commands bereit:</p>
+        <ul>
+          <li><code>/privacy</code></li>
+          <li><code>/data-export</code></li>
+          <li><code>/privacy-settings</code></li>
+          <li><code>/delete-data</code></li>
+          <li><code>/unlink</code> (nur Trennung der Verknüpfung, keine vollständige Löschung)</li>
+        </ul>
+        <p class="muted">
+          Soweit anwendbar, kann ein Beschwerderecht bei der zuständigen Datenschutzaufsichtsbehörde bestehen.
+        </p>
+      </article>
+
+      <article class="section" id="aenderungen">
+        <h2>19. Änderungen</h2>
+        <p>
+          Diese Datenschutzhinweise können angepasst werden, wenn Crafty neue Funktionen erhält.
+        </p>
+        <p>
+          <strong>Stand:</strong> 5. Oktober 2026
+        </p>
+      </article>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-grid">
+        <div>
+          <p><strong>Crafty</strong></p>
+          <p>Privates Minecraft-/Discord-Projekt</p>
+        </div>
+        <div>
+          <p>Datenschutzkontakt:</p>
+          <p><strong>[KONTAKT_EMAIL]</strong></p>
+          <p>Stand: 5. Oktober 2026</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
