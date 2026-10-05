@@ -84,6 +84,7 @@
         <ul>
           <li>Discord User ID (dauerhaft gespeichert, wenn Accounts verknüpft sind)</li>
           <li>Guild-Mitgliedschaft (zur Laufzeit geprüft; nicht als dauerhaftes Profil gespeichert)</li>
+          <li>Rules-Screening-/Pending-Status (zur Laufzeit zur Zugangskontrolle geprüft; keine separate Regelannahme-Historie)</li>
           <li>von Crafty vergebene Role IDs (für Rollentracking)</li>
           <li>Discord–Minecraft-Verknüpfung</li>
         </ul>
@@ -149,9 +150,16 @@
           Wenn du noch nicht Mitglied bist, kann Crafty die Discord-Autorisierung nutzen,
           um dich über <code>guilds.join</code> dem Server hinzuzufügen – sofern du das bei Discord freigibst.
         </p>
-        <p class="muted">
-          Eine gesonderte „Rules Screening“-/Serverregeln-Akzeptanz-Prüfung durch Crafty ist derzeit nicht implementiert.
-          Discord kann eigene Serverregeln und Mitgliedschaftsschritte unabhängig von Crafty anwenden.
+        <p>
+          Für den Minecraft-Spielzugang prüft Crafty zusätzlich,
+          ob ein Discord-Mitglied die auf dem Server eingerichteten
+          Mitgliedschaftsschritte bzw. das Rules Screening abgeschlossen hat.
+        </p>
+        <p>
+          Solange Discord ein Mitglied noch als ausstehend (pending) führt,
+          bleibt der Minecraft-Spielzugang gesperrt.
+          Crafty verwendet diesen Status ausschließlich für die Zugangskontrolle
+          und speichert daraus keine separate Historie über die Regelannahme.
         </p>
       </article>
 
@@ -210,7 +218,9 @@
         <p>Daten werden ausschließlich verwendet für:</p>
         <ul>
           <li>Minecraft/Discord Account Linking</li>
-          <li>Serverzugang</li>
+          <li>Prüfung der Discord-Mitgliedschaft</li>
+          <li>Prüfung abgeschlossener Discord-Mitgliedschaftsschritte / Serverregeln</li>
+          <li>Minecraft-Zugangskontrolle</li>
           <li>Rollenverwaltung</li>
           <li>Stats und Compare</li>
           <li>Gamble und Reward Delivery</li>
@@ -365,8 +375,8 @@
           Crafty erzeugt technische Diagnose-Logs in der Prozess-Konsole.
           Crafty speichert dafür keine eigenen Logdateien mit automatischer Löschung.
           Secrets wie Bot Token, Client Secret, Bridge Secret, OAuth Tokens oder Encryption Keys
-          sowie vollständige OAuth-URLs mit Code sollen nicht protokolliert werden.
-          Discord-IDs und Minecraft-UUIDs werden bevorzugt maskiert.
+          sowie vollständige OAuth-URLs mit Code werden nicht protokolliert.
+          Discord-IDs und Minecraft-UUIDs werden in Diagnose-Logs maskiert.
         </p>
       </article>
 
@@ -398,6 +408,9 @@
           <li><code>/unlink</code> (nur Trennung der Verknüpfung, keine vollständige Löschung)</li>
         </ul>
         <p class="muted">
+          Soweit die jeweiligen gesetzlichen Voraussetzungen vorliegen,
+          können außerdem Rechte auf Einschränkung der Verarbeitung,
+          Widerspruch und Datenübertragbarkeit bestehen.
           Soweit anwendbar, kann ein Beschwerderecht bei der zuständigen Datenschutzaufsichtsbehörde bestehen.
         </p>
       </article>
