@@ -58,13 +58,13 @@ Nur sinnvoll, wenn das Repo ohnehin öffentlich ist (für Crafty i. d. R. **
 
 Dann in Pages den `/privacy-site` Ordner bzw. passende GitHub-Actions-Konfiguration nutzen.
 
-## 4. Notwendige Platzhalter
+## 4. Kontakt
 
-Vor Veröffentlichung ersetzen:
+Aktuelle Datenschutz-Kontaktadresse:
 
-| Platzhalter | Bedeutung |
-|---|---|
-| `[KONTAKT_EMAIL]` | Echte Kontaktadresse für Datenschutzanfragen |
+```text
+crafty-support@proton.me
+```
 
 Keine Klarnamen oder Privatanschriften automatisch eintragen.
 
@@ -98,7 +98,6 @@ dieselbe URL eintragen.
 
 ## 7. TODOs vor öffentlicher / kommerzieller Nutzung
 
-- `[KONTAKT_EMAIL]` durch eine echte Adresse ersetzen
 - Rechtsgrundlage vor einer öffentlichen / kommerziellen Nutzung rechtlich prüfen
 - Wenn Crafty, Discord oder Minecraft Server später öffentlich angeboten,
   kommerzialisiert oder wesentlich über den privaten Freundeskreis hinaus
