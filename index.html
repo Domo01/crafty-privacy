@@ -111,13 +111,12 @@
           <li>kurzlebige OAuth-Sessions und ggf. Link-Codes</li>
         </ul>
 
-        <h3>Gamble (Details)</h3>
-        <ul>
-          <li>Rolls / Roll-Nummer</li>
-          <li>Ergebnis, Rarity, Reward</li>
-          <li>Delivery Status und Zeitpunkt</li>
-          <li>Bezug zur Minecraft UUID (und Discord User ID für die Zuordnung)</li>
-        </ul>
+        <h3>Gamble</h3>
+        <p>
+          Crafty speichert Gamble-Nutzung, Ergebnisse und Zustellungsstatus
+          (bezogen auf Minecraft UUID / Discord-Verknüpfung),
+          um tägliche Limits einzuhalten und doppelte Belohnungen zu verhindern.
+        </p>
 
         <div class="note">
           Crafty speichert selbst keine IP-Adressen, Chat-Inhalte, OAuth Access Tokens oder Authorization Codes dauerhaft.
@@ -193,24 +192,15 @@
           <code>/gamble</code> ist ein kostenloses, serverinternes Minecraft-Loot-System.
           Es gibt keine Echtgeldkäufe und keine Premium-Rolls.
         </p>
-        <p>Dafür werden insbesondere gespeichert:</p>
-        <ul>
-          <li>tägliche Roll-Nutzung</li>
-          <li>Gewinn / Item / Menge</li>
-          <li>Rarity</li>
-          <li>Minecraft UUID</li>
-          <li>Zeitpunkt</li>
-          <li>Reward Delivery Status</li>
-        </ul>
-        <p>Diese Daten dienen insbesondere dazu:</p>
-        <ul>
-          <li>das Daily Limit durchzusetzen</li>
-          <li>doppelte Rewards zu verhindern</li>
-          <li>Offline-Rewards später zuzustellen</li>
-        </ul>
+        <p>
+          Crafty speichert Gamble-Nutzung, Ergebnisse und Zustellungsstatus,
+          um tägliche Limits einzuhalten und doppelte Belohnungen zu verhindern —
+          auch wenn du offline bist und der Reward später zugestellt wird.
+        </p>
         <p class="muted">
           Ergebnisse können im Discord-Channel sichtbar sein.
-          Die persönliche Gamble-Historie ist Teil von Auskunft/Löschung über die Privacy-Commands.
+          Die persönliche Gamble-Historie ist Teil von Auskunft (<code>/data-export</code>)
+          und Löschung (<code>/delete-data</code>).
         </p>
       </article>
 
@@ -286,11 +276,11 @@
               </tr>
               <tr>
                 <td>Technische Logs</td>
-                <td>Ziel: max. 14 Tage</td>
+                <td>Crafty schreibt Diagnose-Logs in die Prozess-Konsole; keine automatische Datei-Retention durch Crafty</td>
               </tr>
               <tr>
                 <td>Backups (falls vorhanden)</td>
-                <td>max. 14 Tage</td>
+                <td>Operator-Verantwortung (kein automatischer Backup-Löschjob in Crafty)</td>
               </tr>
               <tr>
                 <td>Player Stats / Metadaten</td>
@@ -316,7 +306,8 @@
         </p>
         <div class="note warning">
           <code>/unlink</code> ist <strong>nicht</strong> automatisch eine vollständige Datenlöschung.
-          Player Stats können weiterhin bestehen.
+          Player Stats, Player Metadata und Gamble-Historie können weiterhin bestehen.
+          Für die umfassende Löschung nutze <code>/delete-data</code>.
         </div>
       </article>
 
@@ -342,7 +333,16 @@
           Mit <code>/data-export</code> erhältst du eine Übersicht deiner gespeicherten Crafty-Daten
           (als JSON, nur für dich sichtbar / ephemeral).
         </p>
+        <p>Der Export enthält insbesondere:</p>
+        <ul>
+          <li>Linking-Daten (Minecraft UUID/Name, Verknüpfungszeit)</li>
+          <li>Player Metadata und Player Stats</li>
+          <li>Privacy Settings</li>
+          <li>von Crafty getrackte Role IDs</li>
+          <li>Gamble-Historie</li>
+        </ul>
         <p class="muted">
+          Secrets und OAuth Tokens sind nicht enthalten.
           Kurzinfo zusätzlich über <code>/privacy</code>.
         </p>
       </article>
@@ -362,7 +362,8 @@
       <article class="section" id="logs">
         <h2>16. Technische Logs</h2>
         <p>
-          Crafty kann technische Logs zur Fehlerdiagnose erzeugen.
+          Crafty erzeugt technische Diagnose-Logs in der Prozess-Konsole.
+          Crafty speichert dafür keine eigenen Logdateien mit automatischer Löschung.
           Secrets wie Bot Token, Client Secret, Bridge Secret, OAuth Tokens oder Encryption Keys
           sowie vollständige OAuth-URLs mit Code sollen nicht protokolliert werden.
           Discord-IDs und Minecraft-UUIDs werden bevorzugt maskiert.
@@ -372,8 +373,10 @@
       <article class="section" id="sicherheit">
         <h2>17. Sicherheit</h2>
         <p>
-          Crafty versucht, Daten technisch angemessen zu schützen
-          (u.&nbsp;a. Zugriffsschutz der Betriebsdaten und optionale Feldverschlüsselung für Discord-User-IDs).
+          Crafty versucht, Daten technisch angemessen zu schützen.
+          Personenbezogene Discord-User-IDs werden im Ruhezustand feldweise verschlüsselt gespeichert
+          und durch weitere technische Schutzmaßnahmen abgesichert.
+          Nicht die gesamte Crafty-Datenbank ist verschlüsselt — nur die dafür vorgesehenen Felder.
         </p>
         <p class="muted">
           Interne Sicherheitsdetails, Schlüssel und Betriebsgeheimnisse werden hier bewusst nicht veröffentlicht.
